@@ -24,6 +24,11 @@ def preprocess_data(data):
     
     return data
 
+# Map numeric predictions to descriptive labels
+def map_predictions(prediction):
+    labels = {1: 'Low Obesity Risk', 2: 'Moderate Obesity Risk', 3: 'High Obesity Risk', 4: 'Very High Obesity Risk'}
+    return labels.get(prediction, 'Unknown')
+
 # Streamlit app
 def main():
     st.title("Obesity Level Estimation")
@@ -83,10 +88,12 @@ def main():
     if st.sidebar.button('Predict'):
         if model:
             prediction = model.predict(input_data)
+            # Map numeric prediction to descriptive label
+            prediction_label = map_predictions(prediction[0])
             # Debug: Show the prediction
             st.write("Prediction Array:")
             st.write(prediction)
-            st.write(f'Predicted Obesity Level: {prediction[0]}')
+            st.write(f'Predicted Obesity Level: {prediction_label}')
         else:
             st.error("Model is not loaded properly.")
 
