@@ -1,12 +1,12 @@
 # A-Comparison-of-Obesity-Classification-Using-Different-Machine-Learning-Models
 
-Deployed On Streamlit
+### Deployed On Streamlit
 
 ![Screenshot 2024-08-10 112237](https://github.com/user-attachments/assets/2eec48e6-c74b-4233-940d-3a97bda8844a)
 
 ![Screenshot 2024-08-10 112250](https://github.com/user-attachments/assets/915d456f-3063-4312-8edd-2533cc37e94f)
 
-Used all ML Model for prediction
+### Used all ML Model for prediction
 
  Obesity level estimation using data analysis and
 machine learning is a critical area of research in tackling the
